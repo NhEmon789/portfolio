@@ -9,7 +9,6 @@
 
 }
 body{
-  background-color: #081b29;  
 color: #ededed;
 
 }
@@ -50,6 +49,9 @@ color: #ededed;
 .home{
     height: 100vh;
     display: flex;
+    background: url('./uhXn1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
 
     align-items: center;
     padding: 0 10%;
