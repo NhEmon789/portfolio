@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-
-}
-body{
-color: #ededed;
-
+    font-family: 'Poppins', sans-serif;
 }
 
-.header{
+body {
+    color: #ededed;
+}
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,17 +22,29 @@ color: #ededed;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-
 }
 
-.logo{
+.logo {
+    position: relative;
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
 }
 
-.navbar a{
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a1324;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
     font-size: 18px;
     color: #ededed;
     text-decoration: none;
@@ -42,48 +52,72 @@ color: #ededed;
     margin-left: 35px;
     transition: .3s;
 }
+
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: #00abf0;
 }
-.home{
+
+.home {
     height: 100vh;
     display: flex;
     background: url('./uhXn1.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-
     align-items: center;
     padding: 0 10%;
 }
 
-.home-content{
+.home-content {
     max-width: 600px;
 }
-.home-content h1{
 
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+
+    /* Animation */
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    animation: revealText 1.2s ease forwards;
+    animation-delay: .4s;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
+
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    animation: revealText 1.2s ease forwards;
+    animation-delay: .8s;
 }
-.home-content p{
+
+.home-content p {
     font-size: 16px;
     margin: 20px 0 30px;
 
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    animation: revealText 1.2s ease forwards;
+    animation-delay: 1.2s;
 }
-.home-content .btn-box{
+
+.home-content .btn-box {
     display: flex;
     justify-content: space-between;
     width: 345px;
     height: 50px;
 }
-
+.home-sci {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp .8s ease forwards;
+    animation-delay: 2s;
+}
 .btn-box a {
     position: relative;
     display: inline-flex;
@@ -92,35 +126,40 @@ color: #ededed;
     width: 150px;
     height: 100%;
     background: #00abf0;
-    border:2px solid #00abf0;
+    border: 2px solid #00abf0;
     border-radius: 8px;
     font-size: 19px;
-    color: #081b29;
+    color: #0a1324;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
-
 }
-.btn-box a:hover{
+.btn-box {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeUp .8s ease forwards;
+    animation-delay: 1.6s;
+}
+.btn-box a:hover {
     color: #00abf0;
 }
 
-.btn-box a:nth-child(2){
-   background: transparent; 
+.btn-box a:nth-child(2) {
+    background: transparent;
     color: #00abf0;
 }
+
 .btn-box a:nth-child(2):hover {
-    
-    color: #081b29;
+    color: #0a1324;
 }
-
 
 .btn-box a:nth-child(2)::before {
     background: #00abf0;
 }
+
 .btn-box a::before {
     content: '';
     position: absolute;
@@ -128,7 +167,7 @@ color: #ededed;
     left: 0;
     width: 0;
     height: 100%;
-    background: #081b29;
+    background: #0a1324;
     z-index: -1;
     transition: .5s;
 }
@@ -136,11 +175,11 @@ color: #ededed;
 .btn-box a:hover::before {
     width: 100%;
 }
+
 .home-sci {
     position: absolute;
     bottom: 40px;
     width: 170px;
-   
     display: flex;
     justify-content: space-between;
 }
@@ -162,11 +201,10 @@ color: #ededed;
     overflow: hidden;
     transition: .5s;
 }
-.home-sci a:hover{
-    color: #081b29;
+
+.home-sci a:hover {
+    color: #0a1324;
 }
-
-
 
 .home-sci a::before {
     content: '';
@@ -180,6 +218,35 @@ color: #ededed;
     z-index: -1;
     transition: .5s;
 }
-.home-sci a:hover::before{
+
+.home-sci a:hover::before {
     width: 100%;
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+@keyframes revealText {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
