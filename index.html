@@ -8,15 +8,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <body>
     <header class="header">
         <a href="#" class="logo">Emon</a>
         <nav class="navbar">
             <a href="#" class="active">Home</a>
             <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>            
+            <a href="#">Experience</a>         
+            <a href="#contact">Contact</a>
 
         </nav>
 
@@ -28,23 +30,34 @@
                 Hi, I'm Md. Nakib Hasan Emon
             </h1>
             <h3>
-                Flutter Developer
+                Software Developer
             </h3>
             <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
-                layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+            I'm a Computer Science graduate passionate about building mobile, web applications and Ai technology. I enjoy solving real-world
+            problems through clean, user-focused software and am currently seeking opportunities as a Software Developer.
             
             </p>
             <div class="btn-box">
-                <a href="#">Hire Me</a>
-                <a href="#">Let's Talk</a>
+                <a href="Emon CV.pdf" target="_blank">
+                    Resume
+                </a>
+                
+                <a href="#contact">
+                    Let's Talk
+                </a>
 
             </div>
             <div class="home-sci">
-                <a href="#"><i class='bx bxl-gmail'></i></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></i></a>
-                <a href="#"><i class='bx bxl-github'></i></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdnakibhasanemon@gmail.com" target="_blank"
+                rel="noopener noreferrer">
+                <i class='bx bxl-gmail'></i>
+            </a>
+                <a href="https://www.linkedin.com/in/md-nakib-hasan-emon-916082380/" target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></i></a>
+                <a href="https://github.com/NhEmon789" target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-github'></i></i></a>
+                <a href="https://wa.me/01743374027" target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i></i></a>
                 
 
             </div>
@@ -52,6 +65,93 @@
         </div>
        
 
+    </section>
+    <section class="contact" id="contact">
+    
+        <div class="contact-title">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Have a project in mind or want to work together? Feel free to reach out.</p>
+            
+        </div>
+    
+        <div class="contact-container">
+    
+            <!-- Left Side -->
+            <div class="contact-info">
+    
+                <div class="info-box">
+                    <i class='bx bx-envelope'></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdnakibhasanemon@gmail.com" target="_blank"
+                                rel="noopener noreferrer">
+                                mdnakibhasanemon@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="info-box">
+                    <i class='bx bx-phone'></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>
+                            <a href="tel:+8801743374027">
+                                +8801743374027
+                            </a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="info-box">
+                    <i class='bx bx-map'></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Mirpur-2, Dhaka, Bangladesh</p>
+                    </div>
+                </div>
+    
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/md-nakib-hasan-emon-916082380/" target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/NhEmon789"target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+                    <a href="https://wa.me/01743374027" target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.facebook.com/people/NH-Emon/61562286775207/" target="_blank"
+rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
+                </div>
+    
+            </div>
+    
+            <!-- Right Side -->
+            <div class="contact-form">
+    
+                <form id="contact-form">
+    
+                    <div class="input-row">
+    
+                        <input type="text" name="from_name" placeholder="Your Name" required>
+    
+                        <input type="email" name="from_email" placeholder="Your Email" required>
+    
+                    </div>
+    
+                    <input type="text" name="subject" placeholder="Subject" required>
+    
+                    <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+    
+                    <button type="submit">
+                        Send Message
+                    </button>
+    
+                </form>
+    
+            </div>
+    
+        </div>
+    
     </section>
 </body>
 </html>
