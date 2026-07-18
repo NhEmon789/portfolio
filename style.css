@@ -910,12 +910,76 @@ section {
     transition: .3s;
 
 }
+.certificate-card {
+    background: #1b2433;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .4s;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+}
 
+.certificate-card:hover {
+    transform: translateY(-10px);
+}
+
+.certificate-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #00abf0;
+}
+
+.certificate-content {
+    padding: 20px;
+}
+
+.certificate-content h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.certificate-content p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.certificate-content span {
+    display: inline-block;
+    color: #00abf0;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.certificate-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00abf0;
+    color: #081b29;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.certificate-content a:hover {
+    background: #fff;
+}
 .certificate-card a:hover {
 
     background: #00abf0;
     color: #0a1324;
 
+
+}
+.certificate-image {
+    width: 100%;
+    height: 250px;
+    border: none;
+    object-fit: cover;
+    display: block;
+    background: #fff;
 }
 @media(max-width:992px) {
 
